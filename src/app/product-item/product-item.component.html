@@ -1,0 +1,12 @@
+<div class="product-container" >
+    <a routerLink="/productDeatils" [state]=product>
+        <img src="{{product.url}}" class="product-image">
+    </a>
+    <p>{{product.name}}</p>
+    <p>{{product.price}}</p>
+    <select #mySelect (change)="onChange(mySelect.value)"> 
+        <option *ngFor="let c of count">{{c}} </option>
+    </select>
+    <br>
+    <button (click)="add()"> add to cart</button>
+</div>

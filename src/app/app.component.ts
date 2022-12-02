@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { product } from 'src/models/product';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myStore';
+  cart:product[]=[];
+  addToCart(product:product){
+    this.cart.push(product);
+  }
 }
+

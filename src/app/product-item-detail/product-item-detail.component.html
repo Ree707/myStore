@@ -1,0 +1,22 @@
+
+<div class ="detail-container">
+    <img src="{{currentProduct.url}}">
+
+    <div class="detail-item">
+        <h1 > {{currentProduct.name}}</h1>
+        <br>
+        <p >{{currentProduct.price}}</p>
+        <br>
+        <p >{{currentProduct.description}}</p>
+        <br>
+        <select #mySelect (change)="onChange(mySelect.value)" class="select-input"> 
+            <option *ngFor="let c of count">{{c}} </option> 
+        </select>
+        <br>
+        <button (click)="addProduct()" > add to cart</button>
+        <br>
+        <a routerLink="/" class="back-link "> Back to products List</a>
+    </div>
+    
+</div>
+
