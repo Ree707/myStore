@@ -49,4 +49,22 @@ export class CartComponent implements OnInit{
   this.order=[this.name,this.total];
   }
 
+  nameChanged(arg:any) {
+    this.name=arg;
+    console.log("modelchanged " + arg);
+
+  }
+
+  addressChanged(arg:any){
+    this.Address=arg;
+    console.log("modelchanged " + arg);
+
+  }
+
+  ccnumChanged(arg:any){
+    this.CCnum=arg;
+    console.log("modelchanged " + arg);
+    console.log("modelchanged " + arg);
+  }
+
 }

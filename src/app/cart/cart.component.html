@@ -20,12 +20,11 @@
 
 <form #form="ngForm" class="form-margin">
     <p>Full name</p>
-    <input type="text" name="name" required minlength="3" placeholder="(Minimum 3 character)" [(ngModel)]="name">
+    <input type="text" name="name" required minlength="3" placeholder="(Minimum 3 character)" [(ngModel)]="name" (ngModelChange)="nameChanged($event)">
     <p>Address</p>
-    <input type="text" name="Address" required minlength="6" placeholder="(Minimum 6 character)" [(ngModel)]="Address">
+    <input type="text" name="Address" required minlength="6" placeholder="(Minimum 6 character)" [(ngModel)]="Address" (ngModelChange)="addressChanged($event)">
     <p>Credit card number</p>
-    <input type="text" name="CCnum" required minlength="16" maxlength="16" placeholder="(16-digit number)"
-        [(ngModel)]="CCnum">
+    <input type="test" name="CCnum" required pattern="\d{16}" placeholder="(16-digit number)"[(ngModel)]="CCnum" (ngModelChange)="ccnumChanged($event)">
     <p> we will never share your payment details with anyone else</p>
     <a routerLink="/orderConfirmed" [state]=order>
         <input (click)="submitOrder()" type="submit" [disabled]="form.invalid" value="Submit">

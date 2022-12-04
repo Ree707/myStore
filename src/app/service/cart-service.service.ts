@@ -9,7 +9,17 @@ export class CartServiceService {
   constructor() { }
 
   add(newProduct:product){
-    this.products.push(newProduct);
+    //check if this product is already added 
+    let found=false;
+    for (let index = 0; index < this.products.length; index++) {
+      if (this.products[index].name==newProduct.name){
+        this.products[index].amount++;
+        found =true;
+      }
+    }
+    if (!found){
+      this.products.push(newProduct);
+    }
   }
   remove(selectedProduct:product){
     selectedProduct.amount=0;

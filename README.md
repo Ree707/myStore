@@ -1,3 +1,16 @@
+# About the project 
+This is a full single-page ecommerce application with Angular called MyStore. 
+It enable users to browse and purchase items from the store. 
+Consists of 3 pages: 
+1- products list 
+2- product details 
+3- cart 
+4- confirmation page 
+
+the project is build with typescript and angular 
+
+
+
 # MyStore
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
